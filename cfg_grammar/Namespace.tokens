@@ -1,0 +1,14 @@
+T__0=1
+T__1=2
+T__2=3
+T__3=4
+BOOL=5
+INT=6
+FLOAT=7
+STRING=8
+ID=9
+WS=10
+'Namespace('=1
+')'=2
+','=3
+'='=4
