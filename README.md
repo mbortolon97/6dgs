@@ -1,5 +1,5 @@
 # 6DGS
-## [Project page](https://mbortolon97.github.io/6dgs/) |  [Paper](https://arxiv.org/)
+## [Project page](https://mbortolon97.github.io/6dgs/) |  [Paper]([https://arxiv.org/](https://arxiv.org/abs/2407.15484v1))
 This repository contains a PyTorch implementation for the paper: [6DGS: 6D Pose Estimation from a Single Image and a 3D Gaussian Splatting Model](https://arxiv.org/).
 
 ## Installation
