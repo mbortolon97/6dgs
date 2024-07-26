@@ -14,7 +14,6 @@ from scene.colmap_utils import (
 from scene.datasets_utils import store_ply, fetch_ply, get_nerfpp_norm
 from utils.graphics_utils import focal2fov, fov2focal
 from PIL import Image
-import fpsample
 import shutil
 
 
@@ -71,7 +70,7 @@ def readColmapCameras(cam_extrinsics, cam_intrinsics, images_folder):
     return cam_infos
 
 
-def read_colmap_scene_info(path, images, eval, llffhold=8, fps_sampling=-1, save_path = "/data/mbortolon/pose-splatting/train_cameras"):
+def read_colmap_scene_info(path, images, eval, llffhold=8, save_path = "/data/mbortolon/pose-splatting/train_cameras"):
     try:
         cameras_extrinsic_file = os.path.join(path, "sparse/0", "images.bin")
         cameras_intrinsic_file = os.path.join(path, "sparse/0", "cameras.bin")
@@ -117,13 +116,6 @@ def read_colmap_scene_info(path, images, eval, llffhold=8, fps_sampling=-1, save
     except:
         pcd = None
     
-    if fps_sampling > 0:
-        points = np.asarray([train_cam_info.T for train_cam_info in train_cam_infos])
-
-        fps_samples_idx = fpsample.fps_sampling(points, fps_sampling, start_idx=0)
-        # fps_samples_idx = [0, 10, 16, 24, 28, 30, 36, 40]
-        train_cam_infos = [train_cam_infos[fps_sample_idx] for fps_sample_idx in fps_samples_idx]
-
     # if save_path != "":
     #     os.makedirs(save_path, exist_ok=True)
     #     for idx, train_cam_info in enumerate(train_cam_infos):
