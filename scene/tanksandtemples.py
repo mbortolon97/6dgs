@@ -222,9 +222,7 @@ def read_tanksandtemples_scene_info(path, eval, white_background=True, extension
         [0.0, 0.0, 1.0],
     ])
     np.savetxt(intrinsics_file, intrinsic_mat)
-
-    breakpoint()
-
+    
     scene_info = SceneInfo(
         point_cloud=pcd,
         train_cameras=train_cam_infos,
