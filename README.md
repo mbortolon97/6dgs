@@ -12,10 +12,21 @@ conda env create --file environment.yml
 conda activate gaussian_splatting
 ```
 
-
 ## Quick start
+### Setup the data structure
+
+For Tanks&Temples we use the dataset format of NSVF:
+
+[Tanks&Temples](https://dl.fbaipublicfiles.com/nsvf/dataset/TanksAndTemple.zip)
+
+For Mip-NeRF 360°, it is necessary to download the part 1 of the dataset at:
+
+[Mip-NeRF 360°](http://storage.googleapis.com/gresearch/refraw360/360_v2.zip)
+
+You can place the datasets where is more convenient to you, but you need to change the location inside `tools/launch_all_mip_training.sh` and `tools/launch_all_tanks_and_temple_training.sh`.
+
 ### Training the base 3DGS model
-The training script is in `train.py`, to train a 3DGS:
+The training script is located in `train.py`. To train a single 3DGS model:
 
 ```
 python train.py -s [dataset location]
