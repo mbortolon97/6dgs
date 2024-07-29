@@ -42,12 +42,12 @@ sh tools/launch_all_tanks_and_temple_training.sh
 The training and testing script for the pose estimation is located in `pretrain_eval_attention.py`, for training and testing on all the objects from Mip-NeRF 360:
 
 ```
-python3 pretrain_eval_attention.py --exp_path ../pose-splatting/output/ --out_path results.json --data_type mip360
+python3 pretrain_eval_attention.py --exp_path ./output/ --out_path results.json --data_type mip360
 ```
 
 For the Tanks Temple objects
 ```
-python3 pretrain_eval_attention.py --exp_path ../pose-splatting/output/ --out_path results.json --data_type tankstemple
+python3 pretrain_eval_attention.py --exp_path ./output/ --out_path results.json --data_type tankstemple
 ```
 
 
