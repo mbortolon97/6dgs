@@ -19,6 +19,8 @@ For Tanks&Temples we use the dataset format of NSVF:
 
 [Tanks&Temples](https://dl.fbaipublicfiles.com/nsvf/dataset/TanksAndTemple.zip)
 
+The Ignatius object inside the Tanks&Temples dataset contain a malformed `intrinsics.txt`, [here](static/intrinsics.txt)  you can find the same file correctly formatted, if you replace the original with this should work without issues.
+
 For Mip-NeRF 360°, it is necessary to download the part 1 of the dataset at:
 
 [Mip-NeRF 360°](http://storage.googleapis.com/gresearch/refraw360/360_v2.zip)
